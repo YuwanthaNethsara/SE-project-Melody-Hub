@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<title>Shop · MelodyHub</title>
+<link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../css/global.css">
+<link rel="stylesheet" href="../css/components.css">
+<link rel="stylesheet" href="../css/store.css">
+<link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+<header id="site-header"></header>
+<main class="container">
+  <div class="page-head"><h1 id="shop-title">Shop</h1><p>Search the catalog, narrow it down by category and price, and add what you like to your cart.</p></div>
+  <div class="shop-layout">
+    <aside class="filters" id="filters" aria-label="Filters">
+      <div class="filter-block"><h4>Category</h4><div class="filter-list" id="cat-list"></div></div>
+      <div class="filter-block"><h4>Availability</h4>
+        <label class="check"><input type="checkbox" id="f-stock"> In stock only</label>
+        <label class="check"><input type="checkbox" id="f-deals"> On offer</label>
+      </div>
+      <div class="filter-block"><h4><label for="f-max">Maximum price (LKR)</label></h4><input class="input" type="number" id="f-max" min="0" step="500" inputmode="numeric" placeholder="Any price"></div>
+      <button type="button" class="btn btn-sm" id="f-clear">Clear filters</button>
+    </aside>
+    <section aria-label="Products">
+      <div class="shop-top">
+        <div class="search-wrap"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M11 19a8 8 0 100-16 8 8 0 000 16zM21 21l-4.3-4.3"/></svg><input class="input" type="search" id="q" placeholder="Search products" aria-label="Search products"></div>
+        <div class="row">
+          <button type="button" class="btn btn-sm filter-toggle" id="filter-toggle" aria-controls="filters" aria-expanded="false">Filters</button>
+          <label class="sr-only" for="sort">Sort by</label>
+          <select class="select" id="sort" style="width:auto;min-height:40px;font-size:14px"><option value="new">Newest first</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="name">Name A to Z</option><option value="rating">Best rated</option></select>
+        </div>
+      </div>
+      <p class="muted" id="count" aria-live="polite" style="font-size:14px"></p>
+      <div class="grid grid-products" id="grid"></div>
+    </section>
+  </div>
+</main>
+<footer id="site-footer"></footer>
+<script src="../js/config.js"></script>
+<script src="../js/art.js"></script>
+<script src="../js/utils.js"></script>
+<script src="../js/validate.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/guards.js"></script>
+<script src="../js/components.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
