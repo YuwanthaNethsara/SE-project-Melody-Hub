@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<title>Log in · MelodyHub</title>
+<link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../css/global.css">
+<link rel="stylesheet" href="../../css/components.css">
+<link rel="stylesheet" href="../../css/store.css">
+<link rel="stylesheet" href="../../css/responsive.css">
+<link rel="stylesheet" href="../../css/auth.css">
+</head>
+<body>
+<div class="auth-page">
+  <div class="auth-art" id="auth-art">
+    <span id="art-logo"></span>
+    <div><blockquote>Pick up where the music left off.</blockquote><p class="auth-art-foot">Your orders, warranty claims and digital library live in one account.</p></div>
+  </div>
+  <div class="auth-form-side">
+    <div class="auth-card">
+      <div id="login-view">
+        <a class="logo" href="../../index.html" id="logo-link"></a>
+        <h1>Welcome back</h1>
+        <p class="muted">Sign in to your MelodyHub account.</p>
+        <div id="notice"></div>
+        <form id="form" novalidate>
+          <div id="form-error"></div>
+          <div class="field" data-field="email"><label for="email">Email</label><input class="input" id="email" name="email" type="email" required autocomplete="username" placeholder="you@example.com"><div class="field-error"></div></div>
+          <div class="field" data-field="password"><label for="password">Password</label><div class="input-wrap"><input class="input" id="password" name="password" type="password" required autocomplete="current-password" placeholder="Your password"><button type="button" class="icon-btn toggle-pw" id="toggle" aria-label="Show password"></button></div><div class="field-error"></div></div>
+          <div class="forgot-row"><button type="button" class="forgot-link" id="forgot-link">Forgot Password?</button></div>
+          <button class="btn btn-primary btn-block" id="submit" type="submit">Log in</button>
+        </form>
+        <p class="foot">New to MelodyHub? <a href="../register/">Create an account</a></p>
+      </div>
+
+      <div id="forgot-view" class="auth-flow" hidden>
+        <div class="auth-flow-head"><button type="button" class="auth-back" id="forgot-back">← Back to login</button><span class="auth-step" id="forgot-step">Step 1 of 3</span></div>
+        <h2 id="forgot-title">Forgot your password?</h2>
+        <p class="flow-copy" id="forgot-copy">Enter the email address linked to your MelodyHub account and we’ll send you a verification code.</p>
+        <div id="forgot-error"></div>
+
+        <form id="forgot-email-form" novalidate>
+          <div class="field" data-field="forgot-email"><label for="forgot-email">Email Address</label><input class="input" id="forgot-email" type="email" autocomplete="email" placeholder="Enter your registered email"><div class="field-error"></div></div>
+          <button class="btn btn-primary btn-block" id="send-otp" type="submit">Send OTP</button>
+        </form>
+
+        <form id="otp-form" novalidate hidden>
+          <div class="field"><label for="otp">Verification Code</label><input class="input otp-input" id="otp" inputmode="numeric" autocomplete="one-time-code" maxlength="6" pattern="[0-9]{6}" placeholder="••••••"><div class="field-error"></div></div>
+          <div class="otp-meta"><span id="otp-timer">Code expires in 05:00</span><button class="resend-btn" id="resend-otp" type="button" disabled>Resend OTP</button></div>
+          <button class="btn btn-primary btn-block" id="verify-otp" type="submit">Verify OTP</button>
+        </form>
+
+        <form id="reset-form" novalidate hidden>
+          <div class="field" data-field="new-password"><label for="new-password">New Password</label><div class="input-wrap"><input class="input" id="new-password" type="password" autocomplete="new-password" placeholder="Enter new password"><button type="button" class="icon-btn toggle-pw" id="toggle-new-password" aria-label="Show password"></button></div><div class="field-error"></div></div>
+          <div class="field" data-field="confirm-password"><label for="confirm-password">Confirm Password</label><input class="input" id="confirm-password" type="password" autocomplete="new-password" placeholder="Confirm new password"><div class="field-error"></div></div>
+          <button class="btn btn-primary btn-block" id="reset-password" type="submit">Reset password</button>
+        </form>
+
+        <div id="forgot-success" class="success-panel" hidden>
+          <div class="success-icon">✓</div>
+          <h2>Password reset successfully.</h2>
+          <p class="flow-copy">Your password has been updated. You can now sign in with your new password.</p>
+          <button type="button" class="btn btn-primary btn-block" id="back-to-login">Back to Login</button>
+        </div>
+        <p class="auth-note">For your security, verification codes are time-limited and can only be used once.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../../js/config.js"></script>
+<script src="../../js/art.js"></script>
+<script src="../../js/utils.js"></script>
+<script src="../../js/validate.js"></script>
+<script src="../../js/api.js"></script>
+<script src="../../js/auth.js"></script>
+<script src="../../js/guards.js"></script>
+<script src="../../js/components.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
