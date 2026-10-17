@@ -1,0 +1,46 @@
+/* =====================================================================
+   Login / register / forgot password
+   Left: the dark "stage" with the MelodyHub equalizer. Right: the form.
+   ===================================================================== */
+.auth-page { min-height: 100vh; min-height: 100dvh; display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); background: #fff; }
+
+.auth-art { position: relative; overflow: hidden; background: var(--night); color: #e9eaee; padding: 40px 44px; display: flex; flex-direction: column; justify-content: flex-start; gap: 56px; isolation: isolate; }
+.auth-art > div { position: relative; z-index: 1; }
+.auth-art .logo { color: #fff; }
+.auth-art .stage-eq { inset: auto 0 0; height: 46%; gap: 5px; padding: 0 28px; }
+.auth-art blockquote { margin: 0; max-width: 16ch; font-family: var(--font-display); font-weight: 700; font-size: clamp(1.8rem, 1.2rem + 1.6vw, 2.6rem); line-height: 1.08; letter-spacing: -.03em; color: #fff; }
+.auth-art .auth-art-foot { font-size: 15px; color: #9a9da6; max-width: 40ch; margin: 16px 0 0; }
+
+.auth-form-side { display: grid; place-items: center; padding: 40px clamp(20px, 5vw, 72px); }
+.auth-card { width: min(420px, 100%); }
+.auth-card .logo { display: none; margin-bottom: 28px; }
+.auth-card h1 { font-size: clamp(1.9rem, 1.5rem + 1.2vw, 2.4rem); margin: 0 0 6px; }
+.auth-card h2 { font-size: 1.6rem; margin: 0 0 6px; }
+.auth-card > .muted, .auth-card #login-view > .muted { margin-bottom: 26px; }
+.auth-card .input { min-height: 48px; }
+.auth-card .btn-primary { --btn-h: 50px; font-size: 15px; }
+.auth-card .foot { margin: 24px 0 0; color: var(--muted); text-align: center; font-size: 14px; }
+.auth-card .foot a, .forgot-link { color: var(--ink); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--gold); text-decoration-thickness: 2px; }
+.auth-card .foot a:hover, .forgot-link:hover { color: var(--gold-ink); }
+.forgot-row { display: flex; justify-content: flex-end; margin: -6px 0 18px; }
+.forgot-link { background: none; border: 0; padding: 0; font-size: 14px; }
+
+.auth-flow-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 22px; }
+.auth-back { background: none; border: 0; padding: 0; color: var(--muted); font-weight: 600; font-size: 14px; }
+.auth-back:hover { color: var(--ink); }
+.auth-step { font-size: 13px; color: var(--muted); background: var(--canvas); padding: 3px 10px; border-radius: 999px; }
+.flow-copy { color: var(--muted); margin-bottom: 22px; }
+.otp-input { letter-spacing: .5em; font-size: 1.3rem; text-align: center; font-variant-numeric: tabular-nums; }
+.otp-meta { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin: -6px 0 18px; font-size: 13.5px; color: var(--muted); }
+.resend-btn { background: none; border: 0; padding: 0; color: var(--ink); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.resend-btn:disabled { color: var(--faint); text-decoration: none; cursor: not-allowed; }
+.success-panel { text-align: center; }
+.success-icon { width: 60px; height: 60px; border-radius: 50%; background: var(--ok-bg); color: var(--ok); display: grid; place-items: center; font-size: 1.6rem; margin: 0 auto 16px; }
+.auth-note { margin: 22px 0 0; font-size: 13px; color: var(--faint); text-align: center; }
+
+@media (max-width: 960px) {
+  .auth-page { grid-template-columns: 1fr; }
+  .auth-art { display: none; }
+  .auth-card .logo { display: inline-flex; }
+  .auth-form-side { align-items: start; padding-top: 48px; }
+}
