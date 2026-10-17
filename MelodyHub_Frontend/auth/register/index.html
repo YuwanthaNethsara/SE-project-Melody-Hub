@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<title>Register · MelodyHub</title>
+<link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../css/global.css">
+<link rel="stylesheet" href="../../css/components.css">
+<link rel="stylesheet" href="../../css/store.css">
+<link rel="stylesheet" href="../../css/responsive.css">
+<link rel="stylesheet" href="../../css/auth.css">
+</head>
+<body>
+<div class="auth-page">
+  <div class="auth-art" id="auth-art">
+    <span id="art-logo"></span>
+    <div><blockquote>Start your collection.</blockquote><p class="auth-art-foot">Create a customer account to order instruments and records, claim warranties and download music.</p></div>
+  </div>
+  <div class="auth-form-side"><div class="auth-card">
+    <a class="logo" href="../../index.html" id="logo-link"></a>
+    <h1>Create your account</h1><p class="muted">Join MelodyHub as a customer to order products and track them.</p>
+    <form id="form" novalidate>
+      <div id="form-error"></div>
+      <div class="field" data-field="name"><label for="name">Full name</label><input class="input" id="name" name="name" required maxlength="100" autocomplete="name" placeholder="Your name"><div class="field-error"></div></div>
+      <div class="field" data-field="email"><label for="email">Email</label><input class="input" id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com"><div class="field-error"></div></div>
+      <div class="field" data-field="password"><label for="password">Password</label><div class="input-wrap"><input class="input" id="password" name="password" type="password" required minlength="8" autocomplete="new-password" placeholder="At least 8 characters"><button type="button" class="icon-btn toggle-pw" id="toggle" aria-label="Show password"></button></div><div class="strength" aria-hidden="true"><span id="bar"></span></div><div class="field-help" id="strength-text">Use at least 8 characters, including a letter and a number.</div><div class="field-error"></div></div>
+      <div class="field" data-field="confirm"><label for="confirm">Confirm password</label><input class="input" id="confirm" name="confirm" type="password" required autocomplete="new-password" placeholder="Repeat the password"><div class="field-error"></div></div>
+      <button class="btn btn-primary btn-block" id="submit" type="submit">Create account</button>
+    </form>
+    <p class="foot">Already registered? <a href="../login/">Log in</a></p>
+  </div></div>
+</div>
+<script src="../../js/config.js"></script>
+<script src="../../js/art.js"></script>
+<script src="../../js/utils.js"></script>
+<script src="../../js/validate.js"></script>
+<script src="../../js/api.js"></script>
+<script src="../../js/auth.js"></script>
+<script src="../../js/guards.js"></script>
+<script src="../../js/components.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

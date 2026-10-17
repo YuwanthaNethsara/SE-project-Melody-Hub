@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="MelodyHub music store: instruments, vinyl records, accessories and digital music downloads.">
+<title>MelodyHub · Instruments, records and digital music</title>
+<link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/store.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<header id="site-header"></header>
+<main>
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <h1>Instruments, records and digital music in one store.</h1>
+      <p class="lead">Shop guitars, keyboards, vinyl and accessories from MelodyHub, with prices confirmed at checkout, warranties you can claim online and MP3 downloads from our artists.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary btn-lg" href="products/">Shop the store</a>
+        <a class="btn btn-lg" href="products/?deals=1">See current offers</a>
+      </div>
+      <dl class="hero-facts" id="hero-facts"></dl>
+    </div>
+    <div class="hero-stage" id="hero-stage" aria-live="polite">
+      <div class="stage-card"><div class="media skeleton"></div><div><div class="skeleton" style="height:18px;width:60%;margin-bottom:10px"></div><div class="skeleton" style="height:14px;width:90%"></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="promo-section" hidden>
+  <div class="container">
+    <div class="section-head"><div><h2>Offers running now</h2><p>Discounts are applied automatically when you check out.</p></div><a class="btn btn-sm" href="products/?deals=1">All offers</a></div>
+    <div class="offer-grid" id="promos"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head"><div><h2 id="featured-title">Featured products</h2><p id="featured-sub">Picked by the MelodyHub team.</p></div><a class="btn btn-sm" href="products/">Browse all products</a></div>
+    <div class="grid grid-products" id="featured"><div class="skeleton sk-card"></div><div class="skeleton sk-card"></div><div class="skeleton sk-card"></div><div class="skeleton sk-card"></div></div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="container">
+    <div class="section-head"><div><h2>Shop by category</h2><p>Go straight to the instrument or format you are looking for.</p></div></div>
+    <div class="grid grid-cats" id="cats"></div>
+  </div>
+</section>
+
+<section class="section" id="ad-section" hidden>
+  <div class="container" id="ad-banner"></div>
+</section>
+
+<section class="section" id="artist-section" hidden>
+  <div class="container">
+    <div class="section-head"><div><h2>Artists on MelodyHub</h2><p>Albums and tracks from the people behind the music.</p></div><a class="btn btn-sm" href="artists/">All artists</a></div>
+    <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(min(240px,100%),1fr))" id="artists"></div>
+  </div>
+</section>
+
+<section class="section" id="digital-section">
+  <div class="container">
+    <div class="cta-band">
+      <div><h2>Digital music library</h2><p>Customers can download MP3s released by MelodyHub artists. Log in to see what is available.</p></div>
+      <a class="btn btn-dark" id="digital-cta" href="auth/login/">Log in to browse</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head"><div><h2>Why people buy from MelodyHub</h2></div></div>
+    <div class="why-grid" id="why"></div>
+  </div>
+</section>
+</main>
+<footer id="site-footer"></footer>
+<script src="js/config.js"></script>
+<script src="js/art.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/guards.js"></script>
+<script src="js/components.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
